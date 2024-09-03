@@ -1,0 +1,147 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #e0f7fa;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background-color: #007bff;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar img.logo {
+  height: 40px;
+  margin-left: 20px;
+}
+
+.navbar h1 {
+  margin: 0;
+  color: white;
+  font-size: 1.5em;
+}
+
+.toggle-button {
+  margin-right: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #004ba0;
+  color: white;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.3s;
+}
+
+.toggle-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Contenedor principal */
+.app-container {
+  margin-top: 70px; /* Espacio para la navbar fija */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 70px auto 0; /* Centrado */
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Contenedor de la información */
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  margin-top: 2em;
+}
+
+/* Cuadros de datos */
+.data-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 2em;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.data-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.data-card .title {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  color: #333333;
+}
+
+.data-card .value {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 0.25em;
+  color: #007bff;
+}
+
+.data-card .description {
+  font-size: 1.2em;
+  color: #666666;
+}
+
+/* Modo claro/oscuro */
+.light-mode {
+  background-color: #e0f7fa;
+  color: #01579b;
+}
+
+.dark-mode {
+  background-color: #263238;
+  color: #bbdefb;
+}
+
+.light-mode .data-card {
+  background: #f1faff;
+  color: #333333;
+}
+
+.dark-mode .data-card {
+  background: #2c2c2c;
+  color: #ffffff;
+}
+
+.dark-mode .toggle-button {
+  background-color: #004ba0;
+}
+
+/* Estilos para dispositivos grandes */
+@media (min-width: 768px) {
+  .info-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
